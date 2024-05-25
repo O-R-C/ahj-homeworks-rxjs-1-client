@@ -2,6 +2,8 @@
 @value colorMain, colorSecondary, padding, radius, border, shadow from values;
 
 .messages {
+  width: 800px;
+  margin-inline: auto;
   padding: padding;
   display: flex;
   flex-direction: column;

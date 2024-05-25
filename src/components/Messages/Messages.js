@@ -50,7 +50,10 @@ export default class Messages {
    */
   #init() {
     this.#subscribes()
-    this.#serverApi.getMessages((messages) => this.#store.dispatch(SET_MESSAGES, pollingSetMessages(messages.messages)))
+    this.#serverApi.getMessages(
+      (messages) => this.#store.dispatch(SET_MESSAGES, pollingSetMessages(JSON.parse(messages.messages))),
+      () => this.#store.dispatch(SET_MESSAGES, pollingSetMessages([])),
+    )
   }
 
   /**

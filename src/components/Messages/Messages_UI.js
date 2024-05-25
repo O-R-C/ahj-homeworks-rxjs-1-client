@@ -61,6 +61,6 @@ export default class Messages_UI extends BaseUI {
   render(state) {
     this.#clearMessages()
     if (!state || state.length === 0) return
-    state.forEach((message) => this.addMessage(message))
+    state.reverse().forEach((message) => this.addMessage(message))
   }
 }

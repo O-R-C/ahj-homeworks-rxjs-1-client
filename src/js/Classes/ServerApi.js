@@ -48,9 +48,9 @@ export default class ServerApi {
    *
    * @param {function} listener - The listener function that will receive the server messages.
    */
-  getMessages(listener) {
+  getMessages(listener, errorListener) {
     const obs$ = this.#createAjax()
 
-    obs$.subscribe({ next: listener, error: (error) => console.log(error) })
+    obs$.subscribe({ next: listener, error: errorListener })
   }
 }

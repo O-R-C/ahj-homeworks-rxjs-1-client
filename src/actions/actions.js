@@ -14,10 +14,10 @@ export const pollingLoadMessages = (messages) => ({
 /**
  * Creates an action object to set the messages state in the Redux store.
  *
- * @param {string} messages - The serialized JSON string of messages.
+ * @param {string} messages - The messages.
  * @return {Object} An action object with the type SET_MESSAGES and the parsed JSON messages as payload.
  */
 export const pollingSetMessages = (messages) => ({
   type: SET_MESSAGES,
-  payload: JSON.parse(messages),
+  payload: messages,
 })
