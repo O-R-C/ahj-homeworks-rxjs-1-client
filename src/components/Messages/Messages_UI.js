@@ -4,7 +4,18 @@ import getElement from '@/js/getElement'
 import styles from './Messages.module.css'
 import Message from '../ui/Message/Message'
 
+/**
+ * Messages_UI class - UI component for messages.
+ *
+ * @class
+ * @extends {BaseUI}
+ */
 export default class Messages_UI extends BaseUI {
+  /**
+   * Creates app element.
+   *
+   * @returns {HTMLElement} - app element.
+   */
   createApp() {
     const app = getElement({
       tag: 'div',
@@ -26,14 +37,27 @@ export default class Messages_UI extends BaseUI {
     return app
   }
 
+  /**
+   * Adds a message to the messages container.
+   *
+   * @param {Object} message - message object.
+   */
   addMessage(message) {
     this.messagesContainer.append(Message(message))
   }
 
+  /**
+   * Clears messages container.
+   */
   #clearMessages() {
     this.messagesContainer.innerHTML = ''
   }
 
+  /**
+   * Renders messages from the given state.
+   *
+   * @param {Object[]} state - messages state.
+   */
   render(state) {
     this.#clearMessages()
     if (!state || state.length === 0) return

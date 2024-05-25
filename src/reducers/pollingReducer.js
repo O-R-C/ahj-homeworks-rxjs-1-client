@@ -4,6 +4,13 @@ const initialState = {
   messages: [],
 }
 
+/**
+ * Reducer function for handling actions related to polling.
+ *
+ * @param {Object} state - The current state of the reducer.
+ * @param {Object} action - The action object that is being dispatched.
+ * @return {Object} The updated state after applying the action.
+ */
 export const pollingReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_MESSAGES:

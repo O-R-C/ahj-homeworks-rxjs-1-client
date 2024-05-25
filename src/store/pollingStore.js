@@ -1,6 +1,13 @@
 import { pollingReducer } from '@/reducers/pollingReducer'
 import { Subject, scan, share, startWith } from 'rxjs'
 
+/**
+ * Class representing a polling store.
+ *
+ * @class
+ * @property {Subject} actions$ - the actions subject.
+ * @property {Observable} state$ - the state observable.
+ */
 export default class pollingStore {
   constructor() {
     this.actions$ = new Subject()
@@ -13,6 +20,12 @@ export default class pollingStore {
     )
   }
 
+  /**
+   * Dispatches an action with a payload.
+   *
+   * @param {string} action - the action type.
+   * @param {Object} payload - the action payload.
+   */
   dispatch = (action, payload = null) => this.actions$.next({ type: action, payload })
 }
 
