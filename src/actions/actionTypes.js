@@ -1,0 +1,7 @@
+export const LOAD_MESSAGES = 'LOAD_MESSAGES'
+export const SET_MESSAGES = 'SET_MESSAGES'
+export const ADD_MESSAGE = 'ADD_MESSAGE'
+export const REMOVE_MESSAGE = 'REMOVE_MESSAGE'
+export const MARK_ALL_AS_READ = 'MARK_ALL_AS_READ'
+export const MARK_AS_READ = 'MARK_AS_READ'
+export const MARK_AS_UNREAD = 'MARK_AS_UNREAD'

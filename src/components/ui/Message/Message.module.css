@@ -1,0 +1,28 @@
+@value values: '@css/variables.module.css';
+@value colorMain, colorSecondary, padding, radius, border, shadow from values;
+
+.message {
+  padding: padding;
+  display: flex;
+  justify-content: space-between;
+  border: border;
+  border-radius: radius;
+  background-color: colorMain;
+  box-shadow: shadow;
+  color: colorSecondary;
+}
+
+.message__from {
+  font-weight: bold;
+  flex: 0 0 30%;
+}
+
+.message__subject {
+  font-style: italic;
+  flex: 0 0 40%;
+}
+
+.message__received {
+  text-align: right;
+  flex: 0 0 30%;
+}

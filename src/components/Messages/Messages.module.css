@@ -1,0 +1,24 @@
+@value values: '@css/variables.module.css';
+@value colorMain, colorSecondary, padding, radius, border, shadow from values;
+
+.messages {
+  padding: padding;
+  display: flex;
+  flex-direction: column;
+  gap: padding;
+  border: border;
+  border-radius: radius;
+  background-color: colorMain;
+  box-shadow: shadow;
+  color: colorSecondary;
+}
+
+.messages__header {
+  font-weight: bold;
+}
+
+.messages__container {
+  display: flex;
+  flex-direction: column;
+  gap: padding;
+}
